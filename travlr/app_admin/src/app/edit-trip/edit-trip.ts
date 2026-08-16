@@ -66,8 +66,8 @@ export class EditTripComponent implements OnInit {
           console.log('Error: ' + error);
         }
       })
-}
-public onSubmit(): void {
+  }
+  public onSubmit(): void {
     this.submitted = true;
     if (this.editForm.valid) {
       this.tripDataService.updateTrip(this.editForm.value).subscribe({
@@ -81,8 +81,8 @@ public onSubmit(): void {
       });
     }
   }
-  
-// get the form short name to access the form fields
-get f() { return this.editForm.controls; }
+
+  // get the form short name to access the form fields
+  get f() { return this.editForm.controls; }
 }
 
